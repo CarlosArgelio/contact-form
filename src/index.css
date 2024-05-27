@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: 'Karla Bold';
+      src: url(assets/fonts/static/Karla-Bold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Karla Regular';
+        src: url(assets/fonts/static/Karla-Regular.ttf) format('truetype');
+      }
+  }

@@ -10,6 +10,10 @@ export default {
         honeydew: "hsl(148, 38%, 91%)",
         "red-errors": "hsl(0, 66%, 54%)",
       },
+      fontFamily: {
+        "karla-bold": ["Karla Bold"],
+        "karla-regular": ["Karla Regular"],
+      },
     },
   },
   plugins: [],
