@@ -10,6 +10,8 @@ export interface TextFieldProps extends BasePropInput {
   type: string;
 }
 
+export interface RadioSelectionProps extends BasePropInput {}
+
 export const Label: React.FC<BasePropInput> = ({ id, title, isOptional }) => {
   if (!isOptional) {
     return (
@@ -38,7 +40,7 @@ export const TextField: React.FC<TextFieldProps> = ({
     <>
       <Label id={id} title={title} isOptional={isOptional} />
       <input
-        className="px-6 py-3 mt-2 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest rounded-lg"
+        className="px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest rounded-lg"
         type={type}
         id={id}
       />
@@ -46,8 +48,19 @@ export const TextField: React.FC<TextFieldProps> = ({
   );
 };
 
-export const RadioSelection = () => {
-  return <div>InputRadiu</div>;
+export const RadioSelection: React.FC<RadioSelectionProps> = ({
+  id,
+  title,
+  isOptional,
+}) => {
+  return (
+    <>
+      <div className="flex gap-3 px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest active:bg-honeydew rounded-lg">
+        <input type="radio" id={id} />
+        <Label id={id} title={title} isOptional={isOptional} />
+      </div>
+    </>
+  );
 };
 
 export const Checkbox = () => {

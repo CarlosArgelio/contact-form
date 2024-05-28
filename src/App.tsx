@@ -1,5 +1,5 @@
 import { Layout } from "./Components/Layout";
-import { TextField } from "./Components/Input";
+import { TextField, RadioSelection } from "./Components/Input";
 
 const App = () => {
   return (
@@ -21,18 +21,17 @@ const App = () => {
                   <TextField id="email" title="Email Address" type="text" />
                 </fieldset>
 
-                <fieldset>
-                  <legend>Query Type</legend>
+                <fieldset className="my-6">
+                  <legend className="mb-4">Query Type</legend>
 
-                  <label className="block" htmlFor="general-enquiry">
-                    General Enquiry *
-                  </label>
-                  <input id="general-enquiry" type="radio" />
-
-                  <label className="block" htmlFor="support-request">
-                    Support Request *
-                  </label>
-                  <input id="support-request" type="radio" />
+                  <RadioSelection
+                    id="general-enquiry"
+                    title="General Enquiry"
+                  />
+                  <RadioSelection
+                    id="support-request"
+                    title="Support Request"
+                  />
                 </fieldset>
 
                 <fieldset>
