@@ -1,35 +1,29 @@
 import { Layout } from "./Components/Layout";
+import { TextField } from "./Components/Input";
 
 const App = () => {
   return (
     <>
       <main className="m-4 h-[100vh]">
-        <section className="p-6 bg-white rounded-lg">
-          <header>Contact Us</header>
+        <section className="p-6 mt-8 bg-white rounded-lg">
+          <header className="text-3xl tracking-[-1px] font-karla-bold mb-8">
+            Contact Us
+          </header>
           <Layout>
             <form>
               <fieldset>
                 <fieldset>
-                  <label className="block" htmlFor="first-name">
-                    First Name *
-                  </label>
-                  <input id="first-name" type="text" />
-
-                  <label className="block" htmlFor="last-name">
-                    Last Name *
-                  </label>
-                  <input id="last-name" type="text" />
+                  <TextField id="first-name" title="First Name" type="text" />
+                  <TextField id="last-name" title="Last Name" type="text" />
                 </fieldset>
 
                 <fieldset>
-                  <label className="block" htmlFor="email">
-                    Email Address *
-                  </label>
-                  <input id="email" type="email" />
+                  <TextField id="email" title="Email Address" type="text" />
                 </fieldset>
 
                 <fieldset>
                   <legend>Query Type</legend>
+
                   <label className="block" htmlFor="general-enquiry">
                     General Enquiry *
                   </label>
