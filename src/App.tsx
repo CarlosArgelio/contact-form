@@ -1,5 +1,6 @@
 import { Layout } from "./Components/Layout";
 import { TextField, RadioSelection } from "./Components/Input";
+import { Button } from "./Components/Button";
 
 const App = () => {
   return (
@@ -35,21 +36,18 @@ const App = () => {
                 </fieldset>
 
                 <fieldset>
-                  <label className="block" htmlFor="message">
-                    Message *
-                  </label>
-                  <input id="message" type="text" />
+                  <TextField id="message" title="Message" type="text" />
                 </fieldset>
               </fieldset>
 
-              <fieldset className="my-10">
+              <fieldset className="flex gap-4 my-10 text-grey-900">
+                <input type="checkbox" id="privilagies" />
                 <label htmlFor="privilagies">
                   I consent to being contacted by the team *
                 </label>
-                <input type="checkbox" id="privilagies" />
               </fieldset>
 
-              <button>Submit</button>
+              <Button />
             </form>
           </Layout>
         </section>
