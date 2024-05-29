@@ -12,13 +12,13 @@ export interface TextFieldProps extends BasePropInput {
 
 export interface RadioSelectionProps extends BasePropInput {}
 
+export type TitleObligaotryType = Omit<BasePropInput, "id" | "isOptional">;
+
 export const Label: React.FC<BasePropInput> = ({ id, title, isOptional }) => {
   if (!isOptional) {
     return (
       <label className="block text-grey-900" htmlFor={id}>
-        {title}
-        {"  "}
-        {"*"}
+        <TitleObligatory title={title} />
       </label>
     );
   }
@@ -38,12 +38,14 @@ export const TextField: React.FC<TextFieldProps> = ({
 }) => {
   return (
     <>
-      <Label id={id} title={title} isOptional={isOptional} />
-      <input
-        className="px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest rounded-lg"
-        type={type}
-        id={id}
-      />
+      <div>
+        <Label id={id} title={title} isOptional={isOptional} />
+        <input
+          className="w-full px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest rounded-lg"
+          type={type}
+          id={id}
+        />
+      </div>
     </>
   );
 };
@@ -63,8 +65,14 @@ export const RadioSelection: React.FC<RadioSelectionProps> = ({
   );
 };
 
-export const Checkbox = () => {
-  return <div>Input</div>;
+export const TitleObligatory = ({ title }: TitleObligaotryType) => {
+  return (
+    <>
+      <p className="text-grey-900">
+        {title} <span className="font-light text-sm">*</span>
+      </p>
+    </>
+  );
 };
 
 Label.defaultProps = {
