@@ -41,7 +41,7 @@ export const TextField: React.FC<TextFieldProps> = ({
       <div>
         <Label id={id} title={title} isOptional={isOptional} />
         <input
-          className="w-full px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest rounded-lg"
+          className="w-full px-6 py-3 mt-2 mb-6 border border-honeydew focus:outline-none focus:border-tropical-rain-forest hover:border-tropical-rain-forest invalid:text-red-errors invalid:border-red-errors focus:invalid:border-red-errors rounded-lg"
           type={type}
           id={id}
         />

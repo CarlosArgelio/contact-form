@@ -12,3 +12,6 @@
         src: url(assets/fonts/static/Karla-Regular.ttf) format('truetype');
       }
   }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
